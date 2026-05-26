@@ -1224,6 +1224,7 @@ export default function ChatPage() {
               scheduleHistoryClear();
             }
           }
+
           return payload as any;
         },
         replaceMediaURL: (url: string) => {

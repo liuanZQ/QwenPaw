@@ -81,7 +81,7 @@ export function Contributors() {
     <>
       <motion.section
         id="contributor"
-        className="scroll-mt-24 px-4 py-16 md:py-20"
+        className="scroll-mt-24 overflow-x-hidden px-4 py-16 md:py-20"
         variants={sectionVariants}
         initial="hidden"
         whileInView="show"
@@ -192,14 +192,16 @@ export function Contributors() {
             </button>
           </motion.div>
 
-          <div
-            className="pointer-events-none relative left-1/2 mt-10 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
-            style={{
-              background:
-                "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
-              backgroundSize: "16px 100%",
-            }}
-          />
+          <div className="relative mt-10 overflow-hidden">
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-px animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
+              style={{
+                background:
+                  "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
+                backgroundSize: "16px 100%",
+              }}
+            />
+          </div>
 
           <motion.div
             className="font-inter mx-auto mt-12 max-w-3xl space-y-4 text-sm text-(--color-text-tertiary) md:text-base"

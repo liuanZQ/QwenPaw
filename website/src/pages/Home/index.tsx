@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-(--bg) text-(--text)">
+    <main className="min-h-screen overflow-x-hidden bg-(--bg) text-(--text)">
       <Hero />
       <QuickStart docsBase={docsBase} />
       <Channels />

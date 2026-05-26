@@ -99,6 +99,7 @@ html[lang^="zh"] .italic {
 
 html {
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {

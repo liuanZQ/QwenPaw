@@ -254,7 +254,7 @@ export function QuickStart({ docsBase }: QuickStartProps) {
   return (
     <>
       <motion.section
-        className="relative"
+        className="relative overflow-x-hidden"
         variants={sectionVariants}
         initial="hidden"
         whileInView="show"
@@ -262,7 +262,7 @@ export function QuickStart({ docsBase }: QuickStartProps) {
         id="qwenpaw-quickstart"
       >
         <div
-          className="pointer-events-none absolute left-1/2 top-0 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
           style={{
             background:
               "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
@@ -270,7 +270,7 @@ export function QuickStart({ docsBase }: QuickStartProps) {
           }}
         />
         <div
-          className="pointer-events-none absolute left-1/2 top-full h-px w-screen -translate-x-1/2 -translate-y-px animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
+          className="pointer-events-none absolute inset-x-0 top-full h-px -translate-y-px animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
           style={{
             background:
               "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
@@ -311,7 +311,7 @@ export function QuickStart({ docsBase }: QuickStartProps) {
             </motion.div>
             <div className="relative isolate mx-auto max-w-4xl">
               <div
-                className="pointer-events-none absolute left-1/2 top-0 z-20 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
+                className="pointer-events-none absolute inset-x-0 top-0 z-20 h-px animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
                 style={{
                   background:
                     "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
@@ -607,7 +607,7 @@ export function QuickStart({ docsBase }: QuickStartProps) {
                 </motion.div>
               </div>
               <div
-                className="pointer-events-none absolute bottom-0 left-1/2 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-px animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
                 style={{
                   background:
                     "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",

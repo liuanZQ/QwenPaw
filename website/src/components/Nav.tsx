@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, BookOpen, Globe, Download } from "lucide-react";
+import { Menu, X, Globe, Download } from "lucide-react";
 import { QwenpawMascot } from "./QwenpawMascot";
 import { useTranslation } from "react-i18next";
 import { useSiteLanguage } from "@/i18n/SiteLanguageContext";
 import { useSiteConfig } from "@/config-context";
-import { GitHubIcon, SelectTextIcon, NoteIcon } from "./Icon";
+import { NoteIcon } from "./Icon";
 
 const AGENTSCOPE_LOGO_SIZE = 22;
 
@@ -41,15 +41,13 @@ const navLinkBlueClass = `${navLinkBaseClass} hover:!text-[#0064FD] focus-visibl
 const navIconStroke = 1.5;
 
 export function Nav() {
-  const { projectName, docsPath } = useSiteConfig();
+  const { projectName } = useSiteConfig();
   const { toggleLang } = useSiteLanguage();
   const { t, i18n } = useTranslation();
   const isZh = i18n.resolvedLanguage === "zh";
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
-  const docsBase = docsPath.replace(/\/$/, "") || "/docs";
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
@@ -78,24 +76,10 @@ export function Nav() {
           aria-label={projectName}
         >
           <span className="nav-brand-logo -mt-1 flex">
-            <QwenpawMascot size={120} />
+            <QwenpawMascot size={38} />
           </span>
         </Link>
         <div className="nav-links hidden min-[641px]:flex min-[641px]:items-center min-[641px]:gap-6 lg:gap-8">
-          <Link to={docsBase} className={navLinkOrangeClass}>
-            <SelectTextIcon />
-            <span>{t("nav.docs")}</span>
-          </Link>
-          <a
-            href="https://github.com/agentscope-ai/QwenPaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={navLinkOrangeClass}
-            title="QwenPaw on GitHub"
-          >
-            <GitHubIcon />
-            <span>{t("nav.github")}</span>
-          </a>
           <a
             href="https://agentscope.io/"
             target="_blank"
@@ -150,23 +134,6 @@ export function Nav() {
           open ? "" : "hidden"
         }`}
       >
-        <Link
-          to={docsBase}
-          className={navLinkOrangeClass}
-          onClick={() => setOpen(false)}
-        >
-          <BookOpen size={18} strokeWidth={navIconStroke} /> {t("nav.docs")}
-        </Link>
-        <a
-          href="https://github.com/agentscope-ai/QwenPaw"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={navLinkOrangeClass}
-          onClick={() => setOpen(false)}
-          title="QwenPaw on GitHub"
-        >
-          <GitHubIcon /> {t("nav.github")}
-        </a>
         <a
           href="https://agentscope.io/"
           target="_blank"

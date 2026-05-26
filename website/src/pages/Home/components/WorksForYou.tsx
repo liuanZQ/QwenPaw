@@ -68,9 +68,9 @@ export function WorksForYou() {
             </p>
           </motion.div>
 
-          <div className="relative mt-8 py-8 md:mt-12 md:py-12">
+          <div className="relative mt-8 overflow-hidden py-8 md:mt-12 md:py-12">
             <div
-              className="pointer-events-none absolute left-1/2 top-0 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
+              className="pointer-events-none absolute inset-x-0 top-0 h-px animate-[qwenpaw-dash-move-right_1s_linear_infinite]"
               style={{
                 background:
                   "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",
@@ -122,7 +122,7 @@ export function WorksForYou() {
               })}
             </motion.div>
             <div
-              className="pointer-events-none absolute bottom-0 left-1/2 h-px w-screen -translate-x-1/2 animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-px animate-[qwenpaw-dash-move-left_1s_linear_infinite]"
               style={{
                 background:
                   "repeating-linear-gradient(to right, rgba(255,157,77,0.45) 0 8px, transparent 8px 16px)",

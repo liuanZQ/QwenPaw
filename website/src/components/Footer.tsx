@@ -152,7 +152,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <section className="min-w-0 max-w-xl">
             <Link to="/" className="inline-flex items-center mb-4">
-              <QwenpawMascot size={100} />
+              <QwenpawMascot size={36} />
             </Link>
             <p className="mb-2 text-[15px] leading-7 text-(--text)">
               {t("whyQwenpaw.heroLine")}
